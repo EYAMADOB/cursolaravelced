@@ -1,3 +1,4 @@
+@include('estudiantes.Componentes.head')
 <body>
     
 
@@ -14,7 +15,7 @@
 
 @foreach ($estudiant as $estudiant)
 <tr>
-    <form action="{{route("estudiantes.update",["id"=>$estudiant->id])}}" method="POST">
+    <form class="formulario" action="{{route("estudiantes.update",["id"=>$estudiant->id])}}" method="POST">
     <td>
         @csrf
         @method("put")

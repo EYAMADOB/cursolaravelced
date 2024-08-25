@@ -31,7 +31,7 @@ class AuthenticatedSessionController extends Controller
 
         //return redirect()->intended(RouteServiceProvider::HOME);
         
-        return redirect()->intended(route('estudiante.index', absolute:false));
+        return redirect()->intended(route('estudiante.create', absolute:false));
     }
 
     /**

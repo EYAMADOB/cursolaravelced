@@ -23,12 +23,12 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
-    Route::post('/login', [LoginController::class, 'login']);
+    /*Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [LoginController::class, 'login']);*/
 
 
 
-    Route::get('estudiantes/create','App\Http\Controllers\EstudiantesController@create');
+    Route::get('estudiantes/create','App\Http\Controllers\EstudiantesController@create')->name("estudiante.create");
     Route::post('estudiante/store','App\Http\Controllers\EstudiantesController@store')->name("estudiante.store");
     Route::get('estudiantes/index','App\Http\Controllers\EstudiantesController@index')->name("estudiante.index");
     Route::put('estudiantes/update/{id}','App\Http\Controllers\EstudiantesController@update')->name('estudiantes.update');

@@ -43,7 +43,7 @@
     </div> 
     <div class="contenedor-imagen-central">
         <div class="caja-titulo-imagen-central">
-            <h1 class="titulo-imagen-central">Proximamente</h1>
+            <h1 class="titulo-imagen-central">ENTRANETE</h1>
         </div>
         <div id="informaciondeservicios"></div>
         <div class="imagencentral">
@@ -52,33 +52,30 @@
         </div>
     </div>
     <section class="caja-formulario">
-    <form action="{{route("estudiante.store")}}" method="post">
+    <form class="formulario" id="formulario" action="{{route("estudiante.store")}}" method="post">
         @csrf
+        <h1 class="titulo-registro-informacion">Registrate para más información</h1>
         <input type="text" name="nombre" placeholder="nombre">
         <input type="email" name="correo" placeholder="correo">
         <input type="text" name="telefono" placeholder="telefono">
-        <input type="submit" value="agregar">
+        <div class="formulario__gurpo formulario__grupo-btn-enviar">
+            <input type="submit" class=" boton formulario__btn" value="ENVIAR">
+        </div>
     </form> 
 </section>
     <footer class="piedepagina">
         <div class="iconopie">
-            <img src="/IMAGENES/logo-green 2.png" alt="">
+            <!--<img src="/IMAGENES/logo-green 2.png" alt=""> -->
+            <img src="{{asset('img/logo-green 2.png')}}" alt="logo">
         </div>
         <div class="listapie">
-            <ul>
-                <li>Contacto</li>
-                <li>tablas
-                    <a href="/HTML/tablas.html"></a>
-                </li>
-                <li>youtube
-                    <a href="https://www.youtube.com/">enlace externo</a>
-                </li>
+            <ul class="ul_pie">
+                <li >Contacto</li>
                 <li>TrainabilitMx,2023</li>
             </ul>
         </div>
         <div class="iconosredes">
-            <img src="/IMAGENES/WHATSAPP.png" alt="">
-            <img src="/IMAGENES/Group.png" alt="">
+            <img class="img_whatsap" src="{{asset("img/Group.png")}}" alt="group">
 
         </div>
 
